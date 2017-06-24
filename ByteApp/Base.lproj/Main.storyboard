@@ -42,7 +42,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="IK2-ew-jjx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l">
+                            <connections>
+                                <segue destination="JmS-R9-Jwr" kind="show" id="ppn-fa-qHu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndv-mp-5uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
