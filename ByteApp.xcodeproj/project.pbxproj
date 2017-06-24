@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D9016D71EFECE01000AF251 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016D61EFECE01000AF251 /* HabitsList.swift */; };
 		3D9016D91EFECF84000AF251 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016D81EFECF84000AF251 /* Habit.swift */; };
+		3D9016DB1EFED346000AF251 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DA1EFED346000AF251 /* CategoriesList.swift */; };
+		3D9016DD1EFED402000AF251 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DC1EFED402000AF251 /* HabitsList.swift */; };
 		4CDD1A391EFEB73A00207FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */; };
-		4CDD1A3B1EFEB73A00207FB0 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD1A3A1EFEB73A00207FB0 /* CategoriesList.swift */; };
 		4CDD1A3E1EFEB73A00207FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD1A3C1EFEB73A00207FB0 /* Main.storyboard */; };
 		4CDD1A401EFEB73A00207FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD1A3F1EFEB73A00207FB0 /* Assets.xcassets */; };
 		4CDD1A431EFEB73A00207FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD1A411EFEB73A00207FB0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D9016D61EFECE01000AF251 /* HabitsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
 		3D9016D81EFECF84000AF251 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		3D9016DA1EFED346000AF251 /* CategoriesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
+		3D9016DC1EFED402000AF251 /* HabitsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
 		4CDD1A351EFEB73A00207FB0 /* ByteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CDD1A3A1EFEB73A00207FB0 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
 		4CDD1A3D1EFEB73A00207FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CDD1A3F1EFEB73A00207FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CDD1A421EFEB73A00207FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */,
-				4CDD1A3A1EFEB73A00207FB0 /* CategoriesList.swift */,
+				3D9016DA1EFED346000AF251 /* CategoriesList.swift */,
 				3D9016D81EFECF84000AF251 /* Habit.swift */,
 				4CDD1A3C1EFEB73A00207FB0 /* Main.storyboard */,
 				4CDD1A3F1EFEB73A00207FB0 /* Assets.xcassets */,
 				4CDD1A411EFEB73A00207FB0 /* LaunchScreen.storyboard */,
 				4CDD1A441EFEB73A00207FB0 /* Info.plist */,
-				3D9016D61EFECE01000AF251 /* HabitsList.swift */,
+				3D9016DC1EFED402000AF251 /* HabitsList.swift */,
 			);
 			path = ByteApp;
 			sourceTree = "<group>";
@@ -142,10 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CDD1A3B1EFEB73A00207FB0 /* CategoriesList.swift in Sources */,
 				4CDD1A391EFEB73A00207FB0 /* AppDelegate.swift in Sources */,
+				3D9016DD1EFED402000AF251 /* HabitsList.swift in Sources */,
 				3D9016D91EFECF84000AF251 /* Habit.swift in Sources */,
-				3D9016D71EFECE01000AF251 /* HabitsList.swift in Sources */,
+				3D9016DB1EFED346000AF251 /* CategoriesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
