@@ -45,18 +45,25 @@ class CategoriesList: UITableViewController {
         cell.textLabel?.text = aCat.name
         return cell
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let path = tableView.indexPathForSelectedRow
         if let path = path {
-            if segue.identifier == "segueToHabitList" {
-            let aHabitList = segue.destination as? HabitsList
-                let aCat = categories[path.row]
-                aHabitList?.habits = aCat.list
+<<<<<<< HEAD
+            let aCat = categories[path.row]
+            if var aList: HabitsList = segue.destination as? HabitsList {
+                aList.habits = aCat.list
             }
+=======
+            let aHabitList = segue.destination as! HabitsList
+            let categories[path.row].list = sender as! Habit
+
+            aHabitList.habits = aList
+
+>>>>>>> 18dc289dbd88a92b09fbb8374df473ded73819d4
         }
         
-    }
+    }*/
 
 
     /*

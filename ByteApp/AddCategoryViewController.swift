@@ -1,5 +1,5 @@
 //
-//  AddCategory.swift
+//  AddCategoryViewController.swift
 //  ByteApp
 //
 //  Created by Truly Johnson on 6/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCategory: UIViewController {
+class AddCategoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

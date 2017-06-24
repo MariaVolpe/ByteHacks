@@ -1,35 +1,23 @@
 //
-//  HabitsList.swift
+//  CategoriesListViewController.swift
 //  ByteApp
 //
-//  Created by Truly Johnson on 6/24/17.
+//  Created by Maria Volpe and Truly Johnson on 6/24/17.
 //  Copyright © 2017 mt. All rights reserved.
 //
 
 import UIKit
 
-class HabitsList: UITableViewController {
-    
+class CategoriesListViewController: UITableViewController {
+
     //MARK: Properties
-    var habits = [Habit]()
-/*/
-    init(list: [Habit]) {
-        self.habits = list
-        super.init(nibName: nil, bundle: nil)
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    */
+    var categories = [Cat]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadDefaultCategories()
+        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,20 +32,33 @@ class HabitsList: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return habits.count
+        return categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cellIdentifier = "habitCell"
+        let cellIdentifier = "catCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         // Fetches the appropriate category for the data source layout.
-        let aHabit = habits[indexPath.row]
-        
-        cell.textLabel?.text = aHabit.name
+        let aCat = categories[indexPath.row]
+
+        cell.textLabel?.text = aCat.name
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let path = tableView.indexPathForSelectedRow
+        if let path = path {
+            if segue.identifier == "segueToHabitList" {
+            let aHabitList = segue.destination as? HabitsListViewController
+                let aCat = categories[path.row]
+                aHabitList?.habits = aCat.list
+            }
+        }
+        
+    }
+
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,11 +104,27 @@ class HabitsList: UITableViewController {
     }
     */
     
-    private func loadDefaultHabits() {
+    
+    private func loadDefaultCategories() {
+        var mealHabits:[Habit] = []
+        mealHabits.append(Habit(name: "Breakfast"))
+        mealHabits.append(Habit(name: "Lunch"))
+        mealHabits.append(Habit(name: "Dinner"))
+        
+        let catToDo = Cat(name: "To-Do List", array: [])
+        let catResources = Cat(name: "Resources", array: [])
+        var cat1 = Cat(name: "Meals", array: mealHabits)
+        var cat2 = Cat(name: "Medication", array: [])
+        var cat3 = Cat(name: "Hygiene", array: [])
+        var cat4 = Cat(name: "Chores", array: [])
+        var cat5 = Cat(name: "Study", array: [])
+        var cat6 = Cat(name: "Other", array: [])
+        
+        categories += [catToDo, catResources, cat1, cat2, cat3, cat4, cat5, cat6]
         
     }
-    
-    
-   
 
 }
+
+
+

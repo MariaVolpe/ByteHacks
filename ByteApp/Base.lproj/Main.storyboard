@@ -47,7 +47,7 @@
                     <navigationItem key="navigationItem" title="Categories" id="IK2-ew-jjx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l">
                             <connections>
-                                <segue destination="Fod-yT-EJM" kind="presentation" id="cRn-Ym-lzs"/>
+                                <segue destination="Fod-yT-EJM" kind="presentation" identifier="AddCategory" id="cRn-Ym-lzs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBr-3r-gQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="61"/>
+            <point key="canvasLocation" x="2929" y="61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gU1-0j-ier">

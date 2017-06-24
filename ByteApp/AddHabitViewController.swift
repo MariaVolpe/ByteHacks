@@ -1,5 +1,5 @@
 //
-//  AddHabit.swift
+//  AddHabitViewController.swift
 //  ByteApp
 //
 //  Created by Truly Johnson on 6/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddHabit: UIViewController {
+class AddHabitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

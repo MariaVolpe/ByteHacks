@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D9016D91EFECF84000AF251 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016D81EFECF84000AF251 /* CustomClasses.swift */; };
-		3D9016DB1EFED346000AF251 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DA1EFED346000AF251 /* CategoriesList.swift */; };
-		3D9016DD1EFED402000AF251 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DC1EFED402000AF251 /* HabitsList.swift */; };
-		3D9016DF1EFEF987000AF251 /* AddCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DE1EFEF987000AF251 /* AddCategory.swift */; };
-		3D9016E11EFEF9A4000AF251 /* AddHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016E01EFEF9A4000AF251 /* AddHabit.swift */; };
+		3D9016DB1EFED346000AF251 /* CategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DA1EFED346000AF251 /* CategoriesListViewController.swift */; };
+		3D9016DD1EFED402000AF251 /* HabitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DC1EFED402000AF251 /* HabitsListViewController.swift */; };
+		3D9016DF1EFEF987000AF251 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016DE1EFEF987000AF251 /* AddCategoryViewController.swift */; };
+		3D9016E11EFEF9A4000AF251 /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9016E01EFEF9A4000AF251 /* AddHabitViewController.swift */; };
 		4CDD1A391EFEB73A00207FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */; };
 		4CDD1A3E1EFEB73A00207FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD1A3C1EFEB73A00207FB0 /* Main.storyboard */; };
 		4CDD1A401EFEB73A00207FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD1A3F1EFEB73A00207FB0 /* Assets.xcassets */; };
@@ -20,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		3D9016D81EFECF84000AF251 /* CustomClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomClasses.swift; sourceTree = "<group>"; };
-		3D9016DA1EFED346000AF251 /* CategoriesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
-		3D9016DC1EFED402000AF251 /* HabitsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
-		3D9016DE1EFEF987000AF251 /* AddCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategory.swift; sourceTree = "<group>"; };
-		3D9016E01EFEF9A4000AF251 /* AddHabit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHabit.swift; sourceTree = "<group>"; };
+		3D9016DA1EFED346000AF251 /* CategoriesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesListViewController.swift; sourceTree = "<group>"; };
+		3D9016DC1EFED402000AF251 /* HabitsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsListViewController.swift; sourceTree = "<group>"; };
+		3D9016DE1EFEF987000AF251 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		3D9016E01EFEF9A4000AF251 /* AddHabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 		4CDD1A351EFEB73A00207FB0 /* ByteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDD1A3D1EFEB73A00207FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,15 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				4CDD1A381EFEB73A00207FB0 /* AppDelegate.swift */,
-				3D9016DE1EFEF987000AF251 /* AddCategory.swift */,
-				3D9016E01EFEF9A4000AF251 /* AddHabit.swift */,
-				3D9016DA1EFED346000AF251 /* CategoriesList.swift */,
+				3D9016DE1EFEF987000AF251 /* AddCategoryViewController.swift */,
+				3D9016E01EFEF9A4000AF251 /* AddHabitViewController.swift */,
+				3D9016DA1EFED346000AF251 /* CategoriesListViewController.swift */,
 				3D9016D81EFECF84000AF251 /* CustomClasses.swift */,
 				4CDD1A3C1EFEB73A00207FB0 /* Main.storyboard */,
 				4CDD1A3F1EFEB73A00207FB0 /* Assets.xcassets */,
 				4CDD1A411EFEB73A00207FB0 /* LaunchScreen.storyboard */,
 				4CDD1A441EFEB73A00207FB0 /* Info.plist */,
-				3D9016DC1EFED402000AF251 /* HabitsList.swift */,
+				3D9016DC1EFED402000AF251 /* HabitsListViewController.swift */,
 			);
 			path = ByteApp;
 			sourceTree = "<group>";
@@ -149,11 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CDD1A391EFEB73A00207FB0 /* AppDelegate.swift in Sources */,
-				3D9016DF1EFEF987000AF251 /* AddCategory.swift in Sources */,
-				3D9016E11EFEF9A4000AF251 /* AddHabit.swift in Sources */,
-				3D9016DD1EFED402000AF251 /* HabitsList.swift in Sources */,
+				3D9016DF1EFEF987000AF251 /* AddCategoryViewController.swift in Sources */,
+				3D9016E11EFEF9A4000AF251 /* AddHabitViewController.swift in Sources */,
+				3D9016DD1EFED402000AF251 /* HabitsListViewController.swift in Sources */,
 				3D9016D91EFECF84000AF251 /* CustomClasses.swift in Sources */,
-				3D9016DB1EFED346000AF251 /* CategoriesList.swift in Sources */,
+				3D9016DB1EFED346000AF251 /* CategoriesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
