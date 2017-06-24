@@ -8,10 +8,6 @@
 
 import UIKit
 
-class Category: NSObject {
-    
-}
-
 class CategoriesList: UITableViewController {
 
     override func viewDidLoad() {
