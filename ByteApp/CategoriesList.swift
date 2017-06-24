@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CategoriesList.swift
 //  ByteApp
 //
 //  Created by Maria Volpe and Truly Johnson on 6/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CategoriesList: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
