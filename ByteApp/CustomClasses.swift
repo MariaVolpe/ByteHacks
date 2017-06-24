@@ -13,12 +13,13 @@ import UIKit
 class Cat: NSObject {
    // Add UIColor later
     var name: String
-    var list: HabitsList
+    var list: [Habit]
     
     init(name: String, array: [Habit]) {
         self.name = name
-        self.list = HabitsList(list: array)
+        self.list = array
     }
+    
 }
 
 //MARK: Habit

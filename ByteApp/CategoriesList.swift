@@ -32,7 +32,6 @@ class CategoriesList: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return categories.count
     }
 
@@ -46,6 +45,18 @@ class CategoriesList: UITableViewController {
         cell.textLabel?.text = aCat.name
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let path = tableView.indexPathForSelectedRow
+        if let path = path {
+            let aCat = categories[path.row]
+            if var aList: HabitsList = sender as? HabitsList {
+                aList.habits = aCat.list
+            }
+        }
+        
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
