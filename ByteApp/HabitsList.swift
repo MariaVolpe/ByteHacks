@@ -13,6 +13,15 @@ class HabitsList: UITableViewController {
     //MARK: Properties
     var habits = [Habit]()
 
+    init(list: [Habit]) {
+        self.habits = list
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -99,8 +108,6 @@ class HabitsList: UITableViewController {
     }
     
     
-    
-    
-    
+   
 
 }
