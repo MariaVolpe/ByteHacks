@@ -45,17 +45,17 @@ class CategoriesList: UITableViewController {
         cell.textLabel?.text = aCat.name
         return cell
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let path = tableView.indexPathForSelectedRow
         if let path = path {
             let aCat = categories[path.row]
-            if var aList: HabitsList = sender as? HabitsList {
+            if var aList: HabitsList = segue.destination as? HabitsList {
                 aList.habits = aCat.list
             }
         }
         
-    }
+    }*/
 
 
     /*
