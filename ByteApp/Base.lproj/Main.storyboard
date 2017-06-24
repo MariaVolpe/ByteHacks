@@ -80,6 +80,42 @@
             </objects>
             <point key="canvasLocation" x="1990" y="-646"/>
         </scene>
+        <!--AddCategory-->
+        <scene sceneID="SYu-hq-jtQ">
+            <objects>
+                <viewController title="AddCategory" id="Fod-yT-EJM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dcU-GH-adP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bKs-MA-eNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20C-DU-Ip1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kym-4G-cpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="61"/>
+        </scene>
+        <!--AddHabit-->
+        <scene sceneID="fhE-pS-sYP">
+            <objects>
+                <viewController title="AddHabit" id="6Jd-33-CBS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I0R-PF-fxh"/>
+                        <viewControllerLayoutGuide type="bottom" id="6pQ-1l-Mu7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HAf-m6-1O2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBr-3r-gQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="61"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gU1-0j-ier">
             <objects>

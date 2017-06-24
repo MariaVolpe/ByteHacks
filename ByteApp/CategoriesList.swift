@@ -99,6 +99,7 @@ class CategoriesList: UITableViewController {
         mealHabits.append(Habit(name: "Lunch"))
         mealHabits.append(Habit(name: "Dinner"))
         
+        
         let catToDo = Cat(name: "To-Do List", list: [])
         let catResources = Cat(name: "Resources", list: [])
         var cat1 = Cat(name: "Meals", list: mealHabits)
