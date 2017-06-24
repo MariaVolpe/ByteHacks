@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JmS-R9-Jwr" kind="show" id="Va2-20-ART"/>
+                                    <segue destination="JmS-R9-Jwr" kind="show" identifier="segueToHabitList" id="Va2-20-ART"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,7 +45,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="IK2-ew-jjx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l">
+                            <connections>
+                                <segue destination="Fod-yT-EJM" kind="presentation" id="cRn-Ym-lzs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndv-mp-5uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,13 +59,13 @@
         <!--HabitList-->
         <scene sceneID="lkI-t6-ewh">
             <objects>
-                <tableViewController id="JmS-R9-Jwr" userLabel="HabitList" sceneMemberID="viewController">
+                <tableViewController id="JmS-R9-Jwr" userLabel="HabitList" customClass="HabitsList" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yJB-iL-PK7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pgZ-XH-rIf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="habitCell" id="pgZ-XH-rIf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgZ-XH-rIf" id="cya-ku-8U6">
@@ -91,6 +95,15 @@
                     <view key="view" contentMode="scaleToFill" id="20C-DU-Ip1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-su-jUw">
+                                <rect key="frame" x="139" y="86" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

@@ -49,14 +49,14 @@ class CategoriesList: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let path = tableView.indexPathForSelectedRow
         if let path = path {
-            let aHabitList = segue.destination as! HabitsList
-            let categories[path.row].list = sender as! Habit
-
-            aHabitList.habits = aList
-
+            if segue.identifier == "segueToHabitList" {
+            let aHabitList = segue.destination as? HabitsList
+                let aCat = categories[path.row]
+                aHabitList?.habits = aCat.list
+            }
         }
         
-    }*/
+    }
 
 
     /*
