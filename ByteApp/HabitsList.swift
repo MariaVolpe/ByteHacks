@@ -10,6 +10,8 @@ import UIKit
 
 class HabitsList: UITableViewController {
     
+    var habits = [Habit]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,5 +22,8 @@ class HabitsList: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func loadDefaultHabits() {
+        
+    }
     
 }
