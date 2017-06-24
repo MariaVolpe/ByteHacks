@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ByteApp
 //
-//  Created by Maria Volpe on 6/24/17.
+//  Created by Maria Volpe and Truly Johnson on 6/24/17.
 //  Copyright © 2017 mt. All rights reserved.
 //
 
