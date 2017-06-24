@@ -12,7 +12,7 @@ class CategoriesList: UITableViewController {
 
     //MARK: Properties
     
-    var categories = [String]()
+    var categories = [Cat]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,15 +93,16 @@ class CategoriesList: UITableViewController {
     
     
     private func loadDefaultCategories() {
-        let cat1 = "To-Do List"
-        let cat2 = "Resources"
-        var cat3 = "Meals"
-        var cat4 = "Medication"
-        var cat5 = "Chores"
-        var cat6 = "Study"
-        var cat7 = "Other"
+        let catToDo = Cat(name: "To-Do List")
+        let catResources = Cat(name: "Resources")
+        var cat1 = Cat(name: "Meals")
+        var cat2 = Cat(name: "Medication")
+        var cat3 = Cat(name: "Hygiene")
+        var cat4 = Cat(name: "Chores")
+        var cat5 = Cat(name: "Study")
+        var cat6 = Cat(name: "Other")
         
-        categories += [cat1, cat2, cat3, cat4, cat5, cat6, cat7]
+        categories += [catToDo, catResources, cat1, cat2, cat3, cat4, cat5, cat6]
         
     }
     
