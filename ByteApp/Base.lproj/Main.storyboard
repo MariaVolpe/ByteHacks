@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JmS-R9-Jwr" kind="show" identifier="segueToHabitList" id="Va2-20-ART"/>
+                                    <segue destination="mAx-oH-pz6" kind="show" identifier="segueToHabitList" id="Va2-20-ART"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,7 +59,7 @@
         <!--HabitList-->
         <scene sceneID="lkI-t6-ewh">
             <objects>
-                <tableViewController id="JmS-R9-Jwr" userLabel="HabitList" customClass="HabitsList" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="HabitList" id="JmS-R9-Jwr" userLabel="HabitList" customClass="HabitsList" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yJB-iL-PK7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,10 +79,13 @@
                             <outlet property="delegate" destination="JmS-R9-Jwr" id="7o2-8h-SuY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Habits" id="yIT-5d-gyf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ks3-72-Sbd"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-Qv-s2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="-646"/>
+            <point key="canvasLocation" x="2928.8000000000002" y="-646.32683658170924"/>
         </scene>
         <!--AddCategory-->
         <scene sceneID="SYu-hq-jtQ">
@@ -146,6 +149,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gc-Op-FKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="-646.32683658170924"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aou-kK-dbf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mAx-oH-pz6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cy2-DL-APr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JmS-R9-Jwr" kind="relationship" relationship="rootViewController" id="fdf-Pn-pOf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpM-uc-hgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.5999999999999" y="-646.32683658170924"/>
         </scene>
     </scenes>
 </document>
