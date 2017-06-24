@@ -36,15 +36,16 @@ class CategoriesList: UITableViewController {
         return categories.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "catCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        // Fetches the appropriate category for the data source layout.
+        let aCat = categories[indexPath.row]
 
-        // Configure the cell...
-
+        cell.textLabel?.text = aCat.name
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
