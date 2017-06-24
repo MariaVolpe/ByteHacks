@@ -94,14 +94,19 @@ class CategoriesList: UITableViewController {
     
     
     private func loadDefaultCategories() {
-        let catToDo = Cat(name: "To-Do List")
-        let catResources = Cat(name: "Resources")
-        var cat1 = Cat(name: "Meals")
-        var cat2 = Cat(name: "Medication")
-        var cat3 = Cat(name: "Hygiene")
-        var cat4 = Cat(name: "Chores")
-        var cat5 = Cat(name: "Study")
-        var cat6 = Cat(name: "Other")
+        var mealHabits:[Habit] = []
+        mealHabits.append(Habit(name: "Breakfast"))
+        mealHabits.append(Habit(name: "Lunch"))
+        mealHabits.append(Habit(name: "Dinner"))
+        
+        let catToDo = Cat(name: "To-Do List", list: [])
+        let catResources = Cat(name: "Resources", list: [])
+        var cat1 = Cat(name: "Meals", list: mealHabits)
+        var cat2 = Cat(name: "Medication", list: [])
+        var cat3 = Cat(name: "Hygiene", list: [])
+        var cat4 = Cat(name: "Chores", list: [])
+        var cat5 = Cat(name: "Study", list: [])
+        var cat6 = Cat(name: "Other", list: [])
         
         categories += [catToDo, catResources, cat1, cat2, cat3, cat4, cat5, cat6]
         

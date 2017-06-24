@@ -13,9 +13,11 @@ import UIKit
 class Cat: NSObject {
    // Add UIColor later
     var name: String
+    var list: [Habit]
     
-    init(name: String) {
+    init(name: String, list: [Habit]) {
         self.name = name
+        self.list = list
     }
 }
 
