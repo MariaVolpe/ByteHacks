@@ -103,8 +103,8 @@
                             <outlet property="delegate" destination="JmS-R9-Jwr" id="7o2-8h-SuY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Habits" id="yIT-5d-gyf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Bxr-HD-vcQ">
+                    <navigationItem key="navigationItem" title="Tasks" id="yIT-5d-gyf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="Bxr-HD-vcQ">
                             <connections>
                                 <segue destination="65A-ff-nlz" kind="unwind" unwindAction="unwindToCategoryListFromHabitsWithSender:" id="ceV-7i-W3I"/>
                             </connections>
@@ -297,7 +297,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQk-jy-x3a">
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Habit" id="Hyc-Sg-H3Q">
+                                    <navigationItem title="New Task" id="Hyc-Sg-H3Q">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUb-Uh-2ni">
                                             <connections>
                                                 <action selector="cancelAddHabit:" destination="6Jd-33-CBS" id="MQh-L0-YAF"/>
