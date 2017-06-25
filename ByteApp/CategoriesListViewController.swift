@@ -16,11 +16,11 @@ class CategoriesListViewController: UITableViewController {
     var categories = [Cat]()
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     let catArrayKey = "catArray"
+    var tempIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
-            print("first if let")
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
                 print("second if let")
                 self.categories += unarchivedCategories
@@ -113,6 +113,7 @@ class CategoriesListViewController: UITableViewController {
                 let aHabitList = segue.destination as? HabitsListViewController
                 let aCat = categories[path.row]
                 aHabitList?.habits = aCat.list
+                tempIndex = path.row
             }
         }
         
@@ -131,6 +132,14 @@ class CategoriesListViewController: UITableViewController {
         saveCategories()
     }
     
+    @IBAction func unwindToCategoryListFromHabits(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? HabitsListViewController {
+            let theHabits = sourceViewController.habits
+            // Add a new category
+           (categories[tempIndex!]).list = theHabits
+        }
+        saveCategories()
+    }
     
     
     private func loadPermanentCategories() {
@@ -167,29 +176,7 @@ class CategoriesListViewController: UITableViewController {
         let dataToSave = archiveCategories(catArray: categories)
         defaults.set(dataToSave, forKey: catArrayKey)
     }
-/*
-     
-    private func saveCategories() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(categories, toFile: Cat.ArchiveURL.path)
-        if isSuccessfulSave {
-            if #available(iOS 10.0, *) {
-                os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
-            } else {
-                // Fallback on earlier versions
-            }
-        } else {
-            if #available(iOS 10.0, *) {
-                os_log("Failed to save meals...", log: OSLog.default, type: .error)
-            } else {
-                // Fallback on earlier versions
-            }
-        }
-    }
-    
-    private func loadCategories() -> [Cat]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Cat.ArchiveURL.path) as? [Cat]
-    }
-*/
+
 }
 
 

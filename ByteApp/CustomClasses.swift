@@ -21,11 +21,6 @@ class Cat: NSObject, NSCoding {
         self.list = array
     }
     
-    //MARK: Cat Archiving Paths
-    
-    //static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    //static let ArchiveURL = DocumentsDirectory.appendingPathComponent("categories")
- 
     // MARK: Cat NSCoding
     
     func encode(with aCoder: NSCoder)
@@ -56,14 +51,10 @@ class Habit: NSObject, NSCoding {
     // Add time and later
     var name: String
     
+    
     init(name: String) {
         self.name = name
     }
-    
-    //MARK: Habit Archiving Paths
-    
-    //static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    //static let ArchiveURL = DocumentsDirectory.appendingPathComponent("habits")
     
     // MARK: Habit NSCoding
     

@@ -61,6 +61,7 @@
             <objects>
                 <tableViewController title="HabitsListViewController" id="JmS-R9-Jwr" customClass="HabitsListViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="yJB-iL-PK7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yJB-iL-PK7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,6 +103,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Habits" id="yIT-5d-gyf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Bxr-HD-vcQ">
+                            <connections>
+                                <segue destination="65A-ff-nlz" kind="unwind" unwindAction="unwindToCategoryListFromHabitsWithSender:" id="ceV-7i-W3I"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ks3-72-Sbd">
                             <connections>
                                 <segue destination="6Jd-33-CBS" kind="presentation" identifier="segueToAddHabit" id="P3O-7u-TnL"/>
@@ -110,6 +116,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-Qv-s2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="65A-ff-nlz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2125.5999999999999" y="-646.32683658170924"/>
         </scene>
