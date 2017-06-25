@@ -12,6 +12,14 @@ class HabitsListViewController: UITableViewController {
     
     //MARK: Properties
     var habits = [Habit]()
+
+    
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        print("hello")
+        print(sender.date)
+
+    }
+    
 /*/
     init(list: [Habit]) {
         self.habits = list
