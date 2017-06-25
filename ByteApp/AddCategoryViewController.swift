@@ -49,7 +49,8 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let catName = nameTextField.text ?? ""
-        cat = Cat(name: catName, array: [])
+        let catColor = UIColor.blue
+        cat = Cat(name: catName, color: catColor, array: [])
     }
     
     // MARK: - Actions

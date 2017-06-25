@@ -20,6 +20,8 @@ class CategoriesListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Use the edit button item provided by the table view controller.
+        navigationItem.leftBarButtonItem = editButtonItem
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
                 self.categories += unarchivedCategories
@@ -27,10 +29,6 @@ class CategoriesListViewController: UITableViewController {
             else {
                 //loadPermanentCategories()
                 loadDefaultCategories()
-            }
-            let aCat = categories[0]
-            if aCat.name != "To-Do List"{
-                loadPermanentCategories()
             }
         }
     }
@@ -142,8 +140,8 @@ class CategoriesListViewController: UITableViewController {
     
     
     private func loadPermanentCategories() {
-        let catToDo = Cat(name: "To-Do", array: [])
-        let catResources = Cat(name: "Resources", array: [])
+        let catToDo = Cat(name: "To-Do", color: UIColor.red, array: [])
+        let catResources = Cat(name: "Resources", color: UIColor.blue, array: [])
         categories += [catToDo, catResources]
         
     }
@@ -154,12 +152,12 @@ class CategoriesListViewController: UITableViewController {
         mealHabits.append(Habit(name: "Lunch"))
         mealHabits.append(Habit(name: "Dinner"))
     
-        var cat1 = Cat(name: "Meals", array: mealHabits)
-        var cat2 = Cat(name: "Medication", array: [])
-        var cat3 = Cat(name: "Hygiene", array: [])
-        var cat4 = Cat(name: "Chores", array: [])
-        var cat5 = Cat(name: "Study", array: [])
-        var cat6 = Cat(name: "Other", array: [])
+        var cat1 = Cat(name: "Meals", color: UIColor.gray, array: mealHabits)
+        var cat2 = Cat(name: "Medication", color: UIColor.green, array: [])
+        var cat3 = Cat(name: "Hygiene", color: UIColor.magenta, array: [])
+        var cat4 = Cat(name: "Chores", color: UIColor.orange, array: [])
+        var cat5 = Cat(name: "Study", color: UIColor.cyan, array: [])
+        var cat6 = Cat(name: "Other", color: UIColor.purple, array: [])
         
         categories += [cat1, cat2, cat3, cat4, cat5, cat6]
         

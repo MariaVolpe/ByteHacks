@@ -12,12 +12,13 @@ import os.log
 //MARK: Cat
 
 class Cat: NSObject, NSCoding {
-   // Add UIColor later
     var name: String
+    var color: UIColor
     var list: [Habit]
     
-    init(name: String, array: [Habit]) {
+    init(name: String, color: UIColor, array: [Habit]) {
         self.name = name
+        self.color = color
         self.list = array
     }
     
@@ -36,11 +37,15 @@ class Cat: NSObject, NSCoding {
             return nil
         }
         
+        guard let color = aDecoder.decodeObject(forKey: CatPropertyKey.color) as? UIColor else {
+            return nil
+        }
+        
         guard let list = aDecoder.decodeObject(forKey: CatPropertyKey.list) as? [Habit] else {
             return nil
         }
         // Must call designated initializer.
-        self.init(name: name, array: list)
+        self.init(name: name, color: color, array: list)
     }
     
 }
@@ -79,6 +84,7 @@ class Habit: NSObject, NSCoding {
 
 struct CatPropertyKey {
     static let name = "name"
+    static let color = "color"
     static let list = "list"
 }
 
