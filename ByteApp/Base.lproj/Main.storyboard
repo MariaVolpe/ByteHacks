@@ -71,6 +71,18 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgZ-XH-rIf" id="cya-ku-8U6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-rx-klI">
+                                            <rect key="frame" x="217" y="-87" width="158" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="520045261.63381797">
+                                                <!--2017-06-25 01:01:01 +0000-->
+                                            </date>
+                                            <connections>
+                                                <action selector="datePickerValueChanged:" destination="JmS-R9-Jwr" eventType="valueChanged" id="JnM-e3-muN"/>
+                                            </connections>
+                                        </datePicker>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-Qv-s2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="-646"/>
+            <point key="canvasLocation" x="2125.5999999999999" y="-646.32683658170924"/>
         </scene>
         <!--AddCategoryViewController-->
         <scene sceneID="SYu-hq-jtQ">
