@@ -94,7 +94,7 @@
         <!--AddCategoryViewController-->
         <scene sceneID="SYu-hq-jtQ">
             <objects>
-                <viewController title="AddCategoryViewController" id="Fod-yT-EJM" sceneMemberID="viewController">
+                <viewController title="AddCategoryViewController" id="Fod-yT-EJM" customClass="AddCategoryViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dcU-GH-adP"/>
                         <viewControllerLayoutGuide type="bottom" id="bKs-MA-eNm"/>
@@ -128,7 +128,14 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-Rw-Wwr">
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Category" id="nOu-cW-9pR"/>
+                                    <navigationItem title="New Category" id="nOu-cW-9pR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64X-lo-mi9"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk0-hO-OxG">
+                                            <connections>
+                                                <segue destination="LZE-7e-nVv" kind="unwind" unwindAction="unwindToCategoryListWithSender:" id="XXa-2V-dPg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -141,15 +148,20 @@
                             <constraint firstAttribute="trailing" secondItem="xGI-Rw-Wwr" secondAttribute="trailing" id="tOk-11-Kac"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="2Aw-aI-sLH" id="J3y-n5-70f"/>
+                        <outlet property="saveButton" destination="dk0-hO-OxG" id="f7o-U4-bi2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kym-4G-cpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LZE-7e-nVv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1028" y="61"/>
         </scene>
         <!--AddHabitViewController-->
         <scene sceneID="fhE-pS-sYP">
             <objects>
-                <viewController title="AddHabitViewController" id="6Jd-33-CBS" sceneMemberID="viewController">
+                <viewController title="AddHabitViewController" id="6Jd-33-CBS" customClass="AddHabitViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I0R-PF-fxh"/>
                         <viewControllerLayoutGuide type="bottom" id="6pQ-1l-Mu7"/>
@@ -161,7 +173,10 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQk-jy-x3a">
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Habit" id="Hyc-Sg-H3Q"/>
+                                    <navigationItem title="New Habit" id="Hyc-Sg-H3Q">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUb-Uh-2ni"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fol-b3-zQb"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R2Y-T8-8j6">

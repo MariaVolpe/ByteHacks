@@ -45,19 +45,6 @@ class CategoriesListViewController: UITableViewController {
         cell.textLabel?.text = aCat.name
         return cell
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let path = tableView.indexPathForSelectedRow
-        if let path = path {
-            if segue.identifier == "segueToHabitList" {
-            let aHabitList = segue.destination as? HabitsListViewController
-                let aCat = categories[path.row]
-                aHabitList?.habits = aCat.list
-            }
-        }
-        
-    }
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,15 +81,31 @@ class CategoriesListViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let path = tableView.indexPathForSelectedRow
+        if let path = path {
+            if segue.identifier == "segueToHabitList" {
+                let aHabitList = segue.destination as? HabitsListViewController
+                let aCat = categories[path.row]
+                aHabitList?.habits = aCat.list
+            }
+        }
+        
     }
-    */
+    
+    // MARK: - Actions
+    
+    @IBAction func unwindToCategoryList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddCategoryViewController, let aCat = sourceViewController.cat {
+            
+            // Add a new category
+            let newIndexPath = IndexPath(row: categories.count, section: 0)
+            categories.append(aCat)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
     
     
     private func loadDefaultCategories() {
