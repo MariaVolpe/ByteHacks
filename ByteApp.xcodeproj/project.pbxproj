@@ -108,6 +108,7 @@
 				TargetAttributes = {
 					4CDD1A341EFEB73A00207FB0 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2V3XJ3K554;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -266,9 +267,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V3XJ3K554;
 				INFOPLIST_FILE = ByteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mt.ByteApp;
+				PRODUCT_BUNDLE_IDENTIFIER = byteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -278,9 +280,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2V3XJ3K554;
 				INFOPLIST_FILE = ByteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mt.ByteApp;
+				PRODUCT_BUNDLE_IDENTIFIER = byteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
