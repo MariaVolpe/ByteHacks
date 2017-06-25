@@ -73,7 +73,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-rx-klI">
-                                            <rect key="frame" x="217" y="-87" width="157" height="216"/>
+                                            <rect key="frame" x="215" y="-87" width="157" height="216"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <date key="date" timeIntervalSinceReferenceDate="520045261.63381797">
                                                 <!--2017-06-25 01:01:01 +0000-->
@@ -93,6 +93,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Habits" id="yIT-5d-gyf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Bxr-HD-vcQ">
+                            <connections>
+                                <segue destination="65A-ff-nlz" kind="unwind" unwindAction="unwindToCategoryListFromHabitsWithSender:" id="ceV-7i-W3I"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ks3-72-Sbd">
                             <connections>
                                 <segue destination="6Jd-33-CBS" kind="presentation" identifier="segueToAddHabit" id="P3O-7u-TnL"/>
@@ -101,6 +106,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-Qv-s2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="65A-ff-nlz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2125.5999999999999" y="-646.32683658170924"/>
         </scene>
