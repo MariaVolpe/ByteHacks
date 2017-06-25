@@ -119,6 +119,7 @@ class CategoriesListViewController: UITableViewController {
                 let aHabitList = segue.destination as? HabitsListViewController
                 let aCat = categories[path.row]
                 aHabitList?.habits = aCat.list
+                aHabitList?.backColor = aCat.color
                 tempIndex = path.row
             }
         }

@@ -13,10 +13,9 @@ class HabitsListViewController: UITableViewController {
     //MARK: Properties
     var habits = [Habit]()
     var habitName : String = ""
+    var backColor = UIColor.gray
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-        print("hello")
-        print(sender.date)
         setNotificationReminder(date:sender.date)
     }
     
@@ -31,10 +30,7 @@ class HabitsListViewController: UITableViewController {
         // create a corresponding local notification
         let notification = UILocalNotification()
         notification.alertAction = "Done!"
-        //notification.fireDate = date
-        //notification.repeatInterval = date.day
         notification.soundName = UILocalNotificationDefaultSoundName
-        //UIApplication.shared.scheduleLocalNotification(notification)
         
         notification.fireDate = dateToFire
         notification.alertTitle = "Reminder"
@@ -55,11 +51,7 @@ class HabitsListViewController: UITableViewController {
     */
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   if let habitData = UserDefaults.standard.object(forKey: habitArrayKey) as? NSData {
-         //  if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: habitData as Data) as? [Habit] {
-              //  self.habits = unarchivedCategories
-           // }
-       // }
+        self.view.backgroundColor = backColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -148,18 +140,5 @@ class HabitsListViewController: UITableViewController {
     }
     
     // MARK: - Private
-    
-/*
-    private func archiveHabits(habitArray: [Habit]) -> NSData {
-        let archivedObject = NSKeyedArchiver.archivedData(withRootObject: habitArray as NSArray)
-        return archivedObject as NSData
-    }
-    
-    private func saveHabits() {
-        let defaults = UserDefaults.standard
-        let dataToSave = archiveHabits(habitArray: habits)
-        defaults.set(dataToSave, forKey: habitArrayKey)
-    }
-*/
 
 }
