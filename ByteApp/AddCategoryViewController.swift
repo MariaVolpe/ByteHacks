@@ -16,6 +16,7 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
@@ -49,6 +50,12 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let catName = nameTextField.text ?? ""
         cat = Cat(name: catName, array: [])
+    }
+    
+    // MARK: - Actions
+   
+    @IBAction func cancelNewCategory(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Private

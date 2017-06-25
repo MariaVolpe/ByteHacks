@@ -52,6 +52,12 @@ class AddHabitViewController: UIViewController, UITextFieldDelegate {
         habit = Habit(name: habitName)
     }
     
+    // MARK: - Actions
+    
+    @IBAction func cancelAddHabit(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Private
     
     private func updateSaveButtonState() {

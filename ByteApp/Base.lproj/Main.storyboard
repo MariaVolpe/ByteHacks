@@ -141,7 +141,11 @@
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="New Category" id="nOu-cW-9pR">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64X-lo-mi9"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64X-lo-mi9">
+                                            <connections>
+                                                <action selector="cancelNewCategory:" destination="Fod-yT-EJM" id="MWe-QF-Zzx"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk0-hO-OxG">
                                             <connections>
                                                 <segue destination="LZE-7e-nVv" kind="unwind" unwindAction="unwindToCategoryListWithSender:" id="XXa-2V-dPg"/>
@@ -186,7 +190,11 @@
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="New Habit" id="Hyc-Sg-H3Q">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUb-Uh-2ni"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUb-Uh-2ni">
+                                            <connections>
+                                                <action selector="cancelAddHabit:" destination="6Jd-33-CBS" id="MQh-L0-YAF"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fol-b3-zQb">
                                             <connections>
                                                 <segue destination="jIe-pk-PJ2" kind="unwind" unwindAction="unwindToHabitListWithSender:" id="Wel-6C-Qfs"/>
