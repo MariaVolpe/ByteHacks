@@ -22,7 +22,6 @@ class CategoriesListViewController: UITableViewController {
         super.viewDidLoad()
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
-                print("second if let")
                 self.categories += unarchivedCategories
             }
             else {
@@ -143,8 +142,8 @@ class CategoriesListViewController: UITableViewController {
     
     
     private func loadPermanentCategories() {
-        var catToDo = Cat(name: "To-Do", array: [])
-        var catResources = Cat(name: "Resources", array: [])
+        let catToDo = Cat(name: "To-Do", array: [])
+        let catResources = Cat(name: "Resources", array: [])
         categories += [catToDo, catResources]
         
     }
