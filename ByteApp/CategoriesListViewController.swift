@@ -2,7 +2,7 @@
 //  CategoriesListViewController.swift
 //  ByteApp
 //
-//  Created by Maria Volpe and Truly Johnson on 6/24/17.
+//  Created by Truly Johnson and Maria Volpe on 6/24/17.
 //  Copyright © 2017 mt. All rights reserved.
 //
 
@@ -187,7 +187,7 @@ class CategoriesListViewController: UITableViewController {
         studyHabits.append(Habit(name: "Study Computer Science"))
         
         var otherHabits:[Habit] = []
-        otherHabits.append(Habit(name: "Practice Mindfullness"))
+        otherHabits.append(Habit(name: "Practice Mindfulness"))
         otherHabits.append(Habit(name: "Deep Breathing Exercises"))
 
         let cat1 = Cat(name: "Meals", color: UIColor.green, array: mealHabits)

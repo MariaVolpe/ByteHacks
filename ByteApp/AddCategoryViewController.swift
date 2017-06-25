@@ -2,7 +2,7 @@
 //  AddCategoryViewController.swift
 //  ByteApp
 //
-//  Created by Truly Johnson on 6/24/17.
+//  Created by Truly Johnson and Maria Volpe on 6/24/17.
 //  Copyright © 2017 mt. All rights reserved.
 //
 
