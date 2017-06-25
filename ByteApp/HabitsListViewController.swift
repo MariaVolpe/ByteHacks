@@ -17,9 +17,35 @@ class HabitsListViewController: UITableViewController {
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         print("hello")
         print(sender.date)
-
+        setNotificationReminder(date:sender.date)
     }
     
+    
+    func setNotificationReminder(date : Date) {
+  
+        let dateToFire = date
+        
+        // create a corresponding local notification
+        let notification = UILocalNotification()
+        let title = "test"
+        //let dict:NSDictionary = ["ID" : "your ID goes here"]
+        //notification.userInfo = dict as! [String : String]
+        notification.alertBody = "\(title)"
+        notification.alertAction = "Done!"
+        notification.fireDate = date
+       // notification.repeatInterval = .Day  // Can be used to repeat the notification
+        notification.soundName = UILocalNotificationDefaultSoundName
+        //UIApplication.shared.scheduleLocalNotification(notification)
+        print("hello")
+        
+        
+        notification.fireDate = dateToFire.addingTimeInterval(10)
+        notification.alertTitle = "My App Test"
+        notification.alertBody = "Testing Notification \n :)"
+        UIApplication.shared.scheduleLocalNotification(notification)
+
+    
+    }
 /*/
     init(list: [Habit]) {
         self.habits = list
