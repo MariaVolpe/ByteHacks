@@ -209,14 +209,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-kz-e4B">
                                                 <rect key="frame" x="0.0" y="0.0" width="66.5" height="67"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="redButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="IK7-WI-wnF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYT-cB-gUQ">
                                                 <rect key="frame" x="66.5" y="0.0" width="67" height="67"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="magentaButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="6Ly-Nt-6an"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFD-SA-Ahh">
                                                 <rect key="frame" x="133.5" y="0.0" width="66.5" height="67"/>
                                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="purpleButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="MYO-6s-86T"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -226,14 +235,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pG-3c-oKf">
                                                 <rect key="frame" x="0.0" y="0.0" width="66.5" height="66.5"/>
                                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="orangeButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="cQj-nz-AVR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egN-PR-gR6">
                                                 <rect key="frame" x="66.5" y="0.0" width="67" height="66.5"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="brownButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="sq0-sT-CoW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-Hd-6b0">
                                                 <rect key="frame" x="133.5" y="0.0" width="66.5" height="66.5"/>
-                                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="grayButton:" destination="Fod-yT-EJM" eventType="touchUpInside" id="i1W-ew-H2M"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

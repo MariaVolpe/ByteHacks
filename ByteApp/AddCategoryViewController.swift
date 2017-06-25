@@ -17,6 +17,8 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    // MARK: - Color Buttons
+    
     @IBAction func greenButton(_ sender: Any) {
         tempColor = UIColor.green
     }
@@ -28,6 +30,33 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBAction func blueButton(_ sender: Any) {
         tempColor = UIColor.blue
     }
+    
+    @IBAction func redButton(_ sender: Any) {
+        tempColor = UIColor.red
+    }
+    
+    @IBAction func magentaButton(_ sender: Any) {
+        tempColor = UIColor.magenta
+    }
+    
+    @IBAction func purpleButton(_ sender: Any) {
+        tempColor = UIColor.purple
+    }
+    
+    @IBAction func orangeButton(_ sender: Any) {
+        tempColor = UIColor.orange
+    }
+    
+    @IBAction func brownButton(_ sender: Any) {
+        tempColor = UIColor.brown
+    }
+
+    @IBAction func grayButton(_ sender: Any) {
+        tempColor = UIColor.gray
+    }
+    
+    // MARK: - Override Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
