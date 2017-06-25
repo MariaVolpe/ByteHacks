@@ -27,9 +27,10 @@ class CategoriesListViewController: UITableViewController {
                 self.categories += unarchivedCategories
             }
             else {
-                //loadPermanentCategories()
+                loadPermanentCategories()
                 loadDefaultCategories()
             }
+           
         }
     }
     override func didReceiveMemoryWarning() {
@@ -151,13 +152,41 @@ class CategoriesListViewController: UITableViewController {
         mealHabits.append(Habit(name: "Breakfast"))
         mealHabits.append(Habit(name: "Lunch"))
         mealHabits.append(Habit(name: "Dinner"))
-    
-        var cat1 = Cat(name: "Meals", color: UIColor.gray, array: mealHabits)
-        var cat2 = Cat(name: "Medication", color: UIColor.green, array: [])
-        var cat3 = Cat(name: "Hygiene", color: UIColor.magenta, array: [])
-        var cat4 = Cat(name: "Chores", color: UIColor.orange, array: [])
-        var cat5 = Cat(name: "Study", color: UIColor.cyan, array: [])
-        var cat6 = Cat(name: "Other", color: UIColor.purple, array: [])
+        
+        var medHabits:[Habit] = []
+        medHabits.append(Habit(name: "Morning Medication"))
+        medHabits.append(Habit(name: "Night Medication"))
+        
+        var hygieneHabits:[Habit] = []
+        hygieneHabits.append(Habit(name: "Brush Teeth (AM)"))
+        hygieneHabits.append(Habit(name: "Shower/Bath"))
+        hygieneHabits.append(Habit(name: "Wash Hair"))
+        hygieneHabits.append(Habit(name: "Floss"))
+        hygieneHabits.append(Habit(name: "Brush Teeth (PM)"))
+        
+        var choresHabits:[Habit] = []
+        choresHabits.append(Habit(name: "Laundry"))
+        choresHabits.append(Habit(name: "Wash Dishes"))
+        choresHabits.append(Habit(name: "Buy Groceries"))
+        choresHabits.append(Habit(name: "Clean Bedroom"))
+        choresHabits.append(Habit(name: "Clean Bathroom"))
+        choresHabits.append(Habit(name: "Clean Kitchen"))
+        
+        var studyHabits:[Habit] = []
+        studyHabits.append(Habit(name: "Study Math"))
+        studyHabits.append(Habit(name: "Study English"))
+        studyHabits.append(Habit(name: "Study Computer Science"))
+        
+        var otherHabits:[Habit] = []
+        otherHabits.append(Habit(name: "Practice Mindfullness"))
+        otherHabits.append(Habit(name: "Deep Breathing Exercises"))
+
+        let cat1 = Cat(name: "Meals", array: mealHabits)
+        let cat2 = Cat(name: "Medication", array: medHabits)
+        let cat3 = Cat(name: "Hygiene", array: hygieneHabits)
+        let cat4 = Cat(name: "Chores", array: choresHabits)
+        let cat5 = Cat(name: "Study", array: studyHabits)
+        let cat6 = Cat(name: "Other", array: otherHabits)
         
         categories += [cat1, cat2, cat3, cat4, cat5, cat6]
         
