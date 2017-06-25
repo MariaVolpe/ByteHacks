@@ -12,7 +12,6 @@ import os.log
 class AddCategoryViewController: UIViewController, UITextFieldDelegate {
 
     var cat: Cat?
-    var aName: String?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -32,10 +31,6 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // hide keyboard
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        aName = nameTextField.text
     }
     
     // MARK: - Navigation
