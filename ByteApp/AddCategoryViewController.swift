@@ -12,6 +12,7 @@ import os.log
 class AddCategoryViewController: UIViewController, UITextFieldDelegate {
 
     var cat: Cat?
+    var aName: String?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -28,15 +29,21 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate
     
- 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // hide keyboard
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        aName = nameTextField.text
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueFromHabitList" {
-            let aName = nameTextField.text ?? ""
-            cat = Cat(name: aName, array: [])
-        }
+        let catName = nameTextField.text ?? ""
+        cat = Cat(name: catName, array: [])
     }
 
 
