@@ -137,9 +137,23 @@ class HabitsListViewController: UITableViewController {
     }
     */
     
+    // MARK: - Actions
+    
+    @IBAction func unwindToHabitList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddHabitViewController, let aHabit = sourceViewController.habit {
+            
+            // Add a new category
+            let newIndexPath = IndexPath(row: habits.count, section: 0)
+            habits.append(aHabit)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
+    /*
     private func loadDefaultHabits() {
         
     }
+    */
     
     
    

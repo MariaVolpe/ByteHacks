@@ -72,8 +72,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-rx-klI">
-                                            <rect key="frame" x="116" y="-87" width="259" height="216"/>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zRL-rx-klI">
+                                            <rect key="frame" x="217" y="-87" width="157" height="216"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <date key="date" timeIntervalSinceReferenceDate="520045261.63381797">
                                                 <!--2017-06-25 01:01:01 +0000-->
@@ -107,7 +107,7 @@
         <!--AddCategoryViewController-->
         <scene sceneID="SYu-hq-jtQ">
             <objects>
-                <viewController title="AddCategoryViewController" id="Fod-yT-EJM" sceneMemberID="viewController">
+                <viewController title="AddCategoryViewController" id="Fod-yT-EJM" customClass="AddCategoryViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dcU-GH-adP"/>
                         <viewControllerLayoutGuide type="bottom" id="bKs-MA-eNm"/>
@@ -141,7 +141,18 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-Rw-Wwr">
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Category" id="nOu-cW-9pR"/>
+                                    <navigationItem title="New Category" id="nOu-cW-9pR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64X-lo-mi9">
+                                            <connections>
+                                                <action selector="cancelNewCategory:" destination="Fod-yT-EJM" id="MWe-QF-Zzx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dk0-hO-OxG">
+                                            <connections>
+                                                <segue destination="LZE-7e-nVv" kind="unwind" unwindAction="unwindToCategoryListWithSender:" id="XXa-2V-dPg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -154,15 +165,20 @@
                             <constraint firstAttribute="trailing" secondItem="xGI-Rw-Wwr" secondAttribute="trailing" id="tOk-11-Kac"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="2Aw-aI-sLH" id="J3y-n5-70f"/>
+                        <outlet property="saveButton" destination="dk0-hO-OxG" id="f7o-U4-bi2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kym-4G-cpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LZE-7e-nVv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1028" y="61"/>
         </scene>
         <!--AddHabitViewController-->
         <scene sceneID="fhE-pS-sYP">
             <objects>
-                <viewController title="AddHabitViewController" id="6Jd-33-CBS" sceneMemberID="viewController">
+                <viewController title="AddHabitViewController" id="6Jd-33-CBS" customClass="AddHabitViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I0R-PF-fxh"/>
                         <viewControllerLayoutGuide type="bottom" id="6pQ-1l-Mu7"/>
@@ -174,7 +190,18 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQk-jy-x3a">
                                 <rect key="frame" x="0.0" y="21" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="New Habit" id="Hyc-Sg-H3Q"/>
+                                    <navigationItem title="New Habit" id="Hyc-Sg-H3Q">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ZUb-Uh-2ni">
+                                            <connections>
+                                                <action selector="cancelAddHabit:" destination="6Jd-33-CBS" id="MQh-L0-YAF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fol-b3-zQb">
+                                            <connections>
+                                                <segue destination="jIe-pk-PJ2" kind="unwind" unwindAction="unwindToHabitListWithSender:" id="Wel-6C-Qfs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R2Y-T8-8j6">
@@ -208,8 +235,13 @@
                             <constraint firstItem="R2Y-T8-8j6" firstAttribute="top" secondItem="VQk-jy-x3a" secondAttribute="bottom" constant="63" id="xp1-tG-VvW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="fOk-zM-xwG" id="iuH-7z-l6s"/>
+                        <outlet property="saveButton" destination="fol-b3-zQb" id="Wwa-xT-Eth"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBr-3r-gQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jIe-pk-PJ2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2098" y="61"/>
         </scene>
