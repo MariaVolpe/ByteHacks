@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class CategoriesListViewController: UITableViewController {
 
@@ -14,12 +15,20 @@ class CategoriesListViewController: UITableViewController {
     
     var categories = [Cat]()
     @IBOutlet weak var deleteButton: UIBarButtonItem!
+    let catArrayKey = "catArray"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDefaultCategories()
+        if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
+            print("first if let")
+            if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
+                print("second if let")
+                self.categories += unarchivedCategories
+            } else {
+                loadDefaultCategories()
+            }
+        }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,7 +78,8 @@ class CategoriesListViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        saveCategories()
     }
 
 
@@ -112,6 +122,7 @@ class CategoriesListViewController: UITableViewController {
             categories.append(aCat)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
+        saveCategories()
     }
     
     
@@ -133,7 +144,40 @@ class CategoriesListViewController: UITableViewController {
         categories += [catToDo, catResources, cat1, cat2, cat3, cat4, cat5, cat6]
         
     }
-
+    
+    private func archiveCategories(catArray: [Cat]) -> NSData {
+        let archivedObject = NSKeyedArchiver.archivedData(withRootObject: catArray as NSArray)
+        return archivedObject as NSData
+    }
+    
+    private func saveCategories() {
+        let defaults = UserDefaults.standard
+        let dataToSave = archiveCategories(catArray: categories)
+        defaults.set(dataToSave, forKey: catArrayKey)
+    }
+/*
+     
+    private func saveCategories() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(categories, toFile: Cat.ArchiveURL.path)
+        if isSuccessfulSave {
+            if #available(iOS 10.0, *) {
+                os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+            } else {
+                // Fallback on earlier versions
+            }
+        } else {
+            if #available(iOS 10.0, *) {
+                os_log("Failed to save meals...", log: OSLog.default, type: .error)
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+    
+    private func loadCategories() -> [Cat]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Cat.ArchiveURL.path) as? [Cat]
+    }
+*/
 }
 
 
