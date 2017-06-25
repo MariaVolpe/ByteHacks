@@ -20,6 +20,9 @@ class CategoriesListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Use the edit button item provided by the table view controller.
+        navigationItem.leftBarButtonItem = editButtonItem
+        
         if categories.count >= 0{
             if categories.count == 0 || categories[0].name != "To-Do List"{
                 loadPermanentCategories()
