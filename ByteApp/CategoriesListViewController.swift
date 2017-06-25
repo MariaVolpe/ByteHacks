@@ -25,6 +25,7 @@ class CategoriesListViewController: UITableViewController {
                 print("second if let")
                 self.categories += unarchivedCategories
             } else {
+                loadPermanentCategories()
                 loadDefaultCategories()
             }
         }
@@ -126,14 +127,20 @@ class CategoriesListViewController: UITableViewController {
     }
     
     
+    
+    private func loadPermanentCategories() {
+        var catToDo = Cat(name: "To-Do", array: [])
+        var catResources = Cat(name: "Resources", array: [])
+        categories += [catToDo, catResources]
+        
+    }
+    
     private func loadDefaultCategories() {
         var mealHabits:[Habit] = []
         mealHabits.append(Habit(name: "Breakfast"))
         mealHabits.append(Habit(name: "Lunch"))
         mealHabits.append(Habit(name: "Dinner"))
-        
-        let catToDo = Cat(name: "To-Do List", array: [])
-        let catResources = Cat(name: "Resources", array: [])
+    
         var cat1 = Cat(name: "Meals", array: mealHabits)
         var cat2 = Cat(name: "Medication", array: [])
         var cat3 = Cat(name: "Hygiene", array: [])
@@ -141,7 +148,7 @@ class CategoriesListViewController: UITableViewController {
         var cat5 = Cat(name: "Study", array: [])
         var cat6 = Cat(name: "Other", array: [])
         
-        categories += [catToDo, catResources, cat1, cat2, cat3, cat4, cat5, cat6]
+        categories += [cat1, cat2, cat3, cat4, cat5, cat6]
         
     }
     
