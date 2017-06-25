@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CategoriesList-->
+        <!--CategoriesListViewController-->
         <scene sceneID="P3a-b7-pq7">
             <objects>
-                <tableViewController title="CategoriesList" id="Hh5-RC-LIv" customClass="CategoriesList" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="CategoriesListViewController" id="Hh5-RC-LIv" customClass="CategoriesListViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pv6-L3-8UN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mAx-oH-pz6" kind="show" identifier="segueToHabitList" id="Va2-20-ART"/>
+                                    <segue destination="JmS-R9-Jwr" kind="show" identifier="segueToHabitList" id="Sqz-d9-fh2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,7 +47,7 @@
                     <navigationItem key="navigationItem" title="Categories" id="IK2-ew-jjx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILm-LK-y2l">
                             <connections>
-                                <segue destination="Fod-yT-EJM" kind="presentation" identifier="AddCategory" id="cRn-Ym-lzs"/>
+                                <segue destination="Fod-yT-EJM" kind="presentation" identifier="segueToAddCategory" id="cRn-Ym-lzs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1028" y="-646"/>
         </scene>
-        <!--HabitList-->
+        <!--HabitsListViewController-->
         <scene sceneID="lkI-t6-ewh">
             <objects>
-                <tableViewController title="HabitList" id="JmS-R9-Jwr" userLabel="HabitList" customClass="HabitsList" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="HabitsListViewController" id="JmS-R9-Jwr" customClass="HabitsListViewController" customModule="ByteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yJB-iL-PK7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,12 +85,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8H-Qv-s2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.8000000000002" y="-646.32683658170924"/>
+            <point key="canvasLocation" x="2126" y="-646"/>
         </scene>
-        <!--AddCategory-->
+        <!--AddCategoryViewController-->
         <scene sceneID="SYu-hq-jtQ">
             <objects>
-                <viewController title="AddCategory" id="Fod-yT-EJM" sceneMemberID="viewController">
+                <viewController title="AddCategoryViewController" id="Fod-yT-EJM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dcU-GH-adP"/>
                         <viewControllerLayoutGuide type="bottom" id="bKs-MA-eNm"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1028" y="61"/>
         </scene>
-        <!--AddHabit-->
+        <!--AddHabitViewController-->
         <scene sceneID="fhE-pS-sYP">
             <objects>
-                <viewController title="AddHabit" id="6Jd-33-CBS" sceneMemberID="viewController">
+                <viewController title="AddHabitViewController" id="6Jd-33-CBS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I0R-PF-fxh"/>
                         <viewControllerLayoutGuide type="bottom" id="6pQ-1l-Mu7"/>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBr-3r-gQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2929" y="61"/>
+            <point key="canvasLocation" x="2098" y="61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gU1-0j-ier">
@@ -149,24 +149,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gc-Op-FKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="-646.32683658170924"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Aou-kK-dbf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mAx-oH-pz6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cy2-DL-APr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JmS-R9-Jwr" kind="relationship" relationship="rootViewController" id="fdf-Pn-pOf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PpM-uc-hgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1989.5999999999999" y="-646.32683658170924"/>
         </scene>
     </scenes>
 </document>
