@@ -31,6 +31,12 @@ class CategoriesListViewController: UITableViewController {
                 self.categories += unarchivedCategories
             }
         }
+        else {
+            loadPermanentCategories()
+            loadDefaultCategories()
+        }
+           
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,6 +61,7 @@ class CategoriesListViewController: UITableViewController {
         let aCat = categories[indexPath.row]
 
         cell.textLabel?.text = aCat.name
+        cell.textLabel?.textColor = aCat.color
         return cell
     }
 
@@ -140,8 +147,8 @@ class CategoriesListViewController: UITableViewController {
     
     
     private func loadPermanentCategories() {
-        let catToDo = Cat(name: "To-Do", array: [])
-        let catResources = Cat(name: "Resources", array: [])
+        let catToDo = Cat(name: "To-Do", color: UIColor.red, array: [])
+        let catResources = Cat(name: "Resources", color: UIColor.blue, array: [])
         categories += [catToDo, catResources]
         
     }
@@ -180,12 +187,12 @@ class CategoriesListViewController: UITableViewController {
         otherHabits.append(Habit(name: "Practice Mindfullness"))
         otherHabits.append(Habit(name: "Deep Breathing Exercises"))
 
-        let cat1 = Cat(name: "Meals", array: mealHabits)
-        let cat2 = Cat(name: "Medication", array: medHabits)
-        let cat3 = Cat(name: "Hygiene", array: hygieneHabits)
-        let cat4 = Cat(name: "Chores", array: choresHabits)
-        let cat5 = Cat(name: "Study", array: studyHabits)
-        let cat6 = Cat(name: "Other", array: otherHabits)
+        let cat1 = Cat(name: "Meals", color: UIColor.green, array: mealHabits)
+        let cat2 = Cat(name: "Medication", color: UIColor.orange, array: medHabits)
+        let cat3 = Cat(name: "Hygiene", color: UIColor.gray, array: hygieneHabits)
+        let cat4 = Cat(name: "Chores", color: UIColor.cyan, array: choresHabits)
+        let cat5 = Cat(name: "Study", color: UIColor.magenta, array: studyHabits)
+        let cat6 = Cat(name: "Other", color: UIColor.purple, array: otherHabits)
         
         categories += [cat1, cat2, cat3, cat4, cat5, cat6]
         
