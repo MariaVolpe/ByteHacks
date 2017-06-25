@@ -18,8 +18,8 @@ class AddHabitViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nameTextField.delegate = self
+        updateSaveButtonState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +34,15 @@ class AddHabitViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Disable the Save button while editing.
+        saveButton.isEnabled = false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+    }
+    
    
     // MARK: - Navigation
 
@@ -41,6 +50,14 @@ class AddHabitViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let habitName = nameTextField.text ?? ""
         habit = Habit(name: habitName)
+    }
+    
+    // MARK: - Private
+    
+    private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
     }
    
 
