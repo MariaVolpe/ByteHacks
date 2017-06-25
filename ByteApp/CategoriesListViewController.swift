@@ -23,20 +23,17 @@ class CategoriesListViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        if categories.count >= 0{
-            if categories.count == 0 || categories[0].name != "To-Do List"{
-                loadPermanentCategories()
-                loadDefaultCategories()
-            }
-        }
+        
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
                 self.categories += unarchivedCategories
             }
         }
-        else {
-            loadPermanentCategories()
-            loadDefaultCategories()
+        if categories.count >= 0{
+            if categories.count == 0 || categories[0].name != "To-Do List"{
+                loadPermanentCategories()
+                loadDefaultCategories()
+            }
         }
            
 
@@ -150,7 +147,7 @@ class CategoriesListViewController: UITableViewController {
     
     
     private func loadPermanentCategories() {
-        let catToDo = Cat(name: "To-Do", color: UIColor.red, array: [])
+        let catToDo = Cat(name: "To-Do List", color: UIColor.red, array: [])
         let catResources = Cat(name: "Resources", color: UIColor.blue, array: [])
         categories += [catToDo, catResources]
         
