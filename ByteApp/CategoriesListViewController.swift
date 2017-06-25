@@ -22,6 +22,13 @@ class CategoriesListViewController: UITableViewController {
         super.viewDidLoad()
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
+        
+        if categories.count >= 0{
+            if categories.count == 0 || categories[0].name != "To-Do List"{
+                loadPermanentCategories()
+                loadDefaultCategories()
+            }
+        }
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
                 self.categories += unarchivedCategories
