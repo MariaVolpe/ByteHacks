@@ -27,12 +27,14 @@ class CategoriesListViewController: UITableViewController {
         if let categoryData = UserDefaults.standard.object(forKey: catArrayKey) as? NSData {
             if let unarchivedCategories = NSKeyedUnarchiver.unarchiveObject(with: categoryData as Data) as? [Cat] {
                 self.categories += unarchivedCategories
+                saveCategories()
             }
         }
         if categories.count >= 0{
             if categories.count == 0 || categories[0].name != "To-Do List"{
                 loadPermanentCategories()
                 loadDefaultCategories()
+                saveCategories()
             }
         }
            
@@ -139,7 +141,7 @@ class CategoriesListViewController: UITableViewController {
     @IBAction func unwindToCategoryListFromHabits(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? HabitsListViewController {
             let theHabits = sourceViewController.habits
-            // Add a new category
+            // Send new habit back to the category
            (categories[tempIndex!]).list = theHabits
         }
         saveCategories()

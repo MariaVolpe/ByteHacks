@@ -27,6 +27,7 @@ class Cat: NSObject, NSCoding {
     func encode(with aCoder: NSCoder)
     {
         aCoder.encode(name, forKey: CatPropertyKey.name)
+        aCoder.encode(color, forKey: CatPropertyKey.color)
         aCoder.encode(list, forKey: CatPropertyKey.list)
     }
     
