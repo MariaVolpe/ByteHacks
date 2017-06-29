@@ -1,2 +1,4 @@
 ~/repos/ByteHacks/.gitignore
 .DS_Store
+xcuserdata/
+*.swift.orig
